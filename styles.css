@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #14042d;
+    color: rgb(255, 255, 255);
+    padding: 1rem 0;
+    text-align: center;
+    position: relative; /* Added to position the image inside header */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0;
+}
+
+.profile-photo {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    border: 2px solid rgb(255, 254, 254); /* Optional: Add a white border */
+    cursor: pointer; /* Indicate that the image is clickable */
+    transition: transform 0.3s, width 0.3s, height 0.3s; /* Smooth transition */
+}
+
+.profile-photo.maximized {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+section {
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+#skills .skill-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Adjust the gap as needed */
+    justify-content: center; /* Center the logos */
+    padding: 20px; /* Add some padding around the logos */
+}
+
+#skills .skill-logos img {
+    width: 90px; /* Adjust the width as needed */
+    height: 90px; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Add a smooth transition for scaling */
+}
+
+#skills .skill-logos img:hover {
+    transform: scale(1.3); /* Scale up the logo slightly on hover */
+}
+
+.project {
+    margin: 1rem 0;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #190a2c;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
